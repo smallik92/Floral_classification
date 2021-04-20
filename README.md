@@ -1,2 +1,4 @@
 # Floral_classification
 Kaggle Computer Vision Challenge
+
+The task was to develop a model for classifying floral images (~16.5k training samples and 100+ floral classes). I approached the problem by implementing a custom Residual Network architecture from scratch. However, the challenge in this competition was that there was a great deal of structural similarity(for eg. color, shape) in the floral training images provided. A stand-alone ResNet50 was providing an accuracy of ~80% after training for over 200 epochs. In this situation there were two options for improving model performance - (i) rigororous hyperparameter tuning or (ii) utilizing hidden layers of pretrained models. The final architecture comprised of weighted ensemble of pretrained deep neural networks such as ResNet50, DenseNet201 and Xception. With this, after only 15 epochs of training the final fully connected layers, the model reported an improved accuracy of 93%. 
